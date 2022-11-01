@@ -1,0 +1,97 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+@import "../modules/ui.scss";
+
+.first-block {
+  background: $background-header;
+  font-weight: 500;
+  font-size: $font-size-disc;
+  line-height: 17px;
+  @media screen and (min-width: $breakpoint-tablet-M) {
+    font-size: $font-size-disc-desktop;
+    line-height: 25px;
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+    font-weight: 700;
+    line-height: 48px;
+    margin-bottom: 21px;
+    color: $color-dark-blue;
+    @media screen and (min-width: $breakpoint-tablet-M) {
+      margin-bottom: 36px;
+      font-size: $font-size-h1-desktop;
+      line-height: 109px;
+    }
+  }
+
+  span {
+    //display: block;
+    color: $color-first-block-disc;
+    margin-left: 15px;
+  }
+
+  &__container {
+    @media screen and (min-width: $breakpoint-tablet-M) {
+      display: flex;
+    }
+  }
+
+  &__column {
+    @media screen and (min-width: $breakpoint-tablet-M) {
+      flex: 0 1 50%;
+    }
+
+    &_image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      height: 280px;
+      @media screen and (min-width: $breakpoint-tablet-M) {
+        width: 100px;
+        height: 600px;
+      }
+    }
+  }
+
+  &__disc {
+    margin-bottom: 21px;
+    @media screen and (min-width: $breakpoint-tablet-M) {
+      margin-bottom: 118px;
+    }
+  }
+
+
+  svg {
+    width: 130%;
+    position: absolute;
+    object-fit: cover;
+    max-height: 280px;
+    z-index: 1;
+    @media screen and (min-width: $breakpoint-tablet-M) {
+      width: 136%;
+      max-height: 600px;
+      top: -90px;
+      right: -52px;
+    }
+  }
+
+  .smoke {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-white;
+    width: 59%;
+    height: 17%;
+    z-index: 2;
+    opacity: 1;
+    box-shadow: 0 0 79px 35px rgba(255, 255, 255, 0.58);
+    filter: blur(16px);
+    @media screen and (min-width: $breakpoint-tablet-M) {
+      display: none;
+    }
+  }
+}

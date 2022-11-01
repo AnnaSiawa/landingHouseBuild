@@ -1,0 +1,60 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+@import "../modules/ui.scss";
+
+
+.header {
+  padding-top: 36px;
+  padding-bottom: 21px;
+  display: flex;
+  background: $background-header;
+  position: relative;
+  z-index: 1;
+  @include main-style-text;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-width: 155px;
+    width: 100%;
+  }
+
+  &__button {
+    position: relative;
+    border: 1.18px solid $button-border;
+    border-radius: 19.4922px;
+    color: $button-text;
+    padding: 7px 21px 7px 40px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9.45078px;
+    line-height: 12px;
+
+    @media screen and (min-width: $breakpoint-tablet-M) {
+      display: none;
+    }
+
+    &_logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      border: 1px solid $button-border;
+    }
+  }
+}
+
+
+

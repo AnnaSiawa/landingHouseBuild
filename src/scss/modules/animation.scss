@@ -1,0 +1,112 @@
+@import "vars";
+
+@keyframes flashing {
+  0% {
+    fill: $bulb;
+  }
+
+  50% {
+    fill: $color-white;
+  }
+
+  75% {
+    fill: $bulb;
+  }
+
+  100% {
+    fill: $color-white;
+  }
+}
+
+@keyframes leaf1-movement {
+  0% {
+    transform: translate(95px, -104px) rotate(7deg);
+  }
+  50% {
+    transform: translate(232px, -216px) rotate(16deg);
+  }
+  100% {
+    transform: translate(95px, -104px) rotate(7deg);
+  }
+}
+
+@keyframes leaf2-movement {
+  0% {
+    transform: translate(95px, -102px) rotate(7deg);
+  }
+  50% {
+    transform: translate(249px, -221px) rotate(17deg);
+  }
+  100% {
+    transform: translate(95px, -102px) rotate(7deg);
+  }
+}
+
+.window1, .window2, .window3, .window4 {
+  -moz-animation-direction: alternate;
+  -moz-animation-duration: 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: flashing;
+  -moz-animation-play-state: running;
+  -moz-animation-timing-function: linear;
+
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: flashing;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+
+.window1, .window2, .window3, .window4, leaf1, leaf2 {
+  backface-visibility: hidden;
+  will-change: fill;
+}
+
+.window2 {
+  -moz-animation-delay: 1s;
+  animation-delay: 1.5s;
+}
+
+.window3 {
+  -moz-animation-delay: 1s;
+  animation-delay: 1.8s;
+}
+
+.window4 {
+  -moz-animation-delay: 1s;
+  animation-delay: 2.2s;
+}
+
+.leaf1 {
+  transform: translate(95px, -104px) rotate(7deg);
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: leaf1-movement;
+  -moz-animation-play-state: running;
+  -moz-animation-timing-function: linear;
+
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-name: leaf1-movement;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+
+.leaf2 {
+  transform: translate(95px, -102px) rotate(7deg);
+
+  -moz-animation-delay: 0.5s;
+  -moz-animation-duration: 6s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: leaf2-movement;
+  -moz-animation-play-state: running;
+  -moz-animation-timing-function: linear;
+
+  animation-delay: 0.5s;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-name: leaf2-movement;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}

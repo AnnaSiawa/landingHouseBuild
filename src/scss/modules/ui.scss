@@ -1,0 +1,43 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+
+.btn-calc {
+  padding: 15.5px 29px;
+  border-radius: 43px;
+  background-color: $button-calc-background;
+  color: $color-white;
+  line-height: 22px;
+  font-weight: 700;
+  font-size: $font-size-button-calc;
+  position: relative;
+  z-index: 2;
+  @media screen and (min-width: $breakpoint-tablet-M) {
+    padding: 25px 73px;
+    font-size: $font-size-button-calc-desktop;
+  }
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+  cursor: pointer;
+
+  //&:hover {
+  //  color: $color-text;
+  //  text-decoration: none;
+  //}
+}
+
+.link {
+  color: $color-link;
+  line-height: 21px;
+  font-weight: 700;
+  text-decoration: underline;
+  position: relative;
+  z-index: 2;
+}
+.link-phone {
+  color: $button-text;
+}
+
